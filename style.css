@@ -1,8 +1,4 @@
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History of Java</title>
-    <style>
-    pre {color:rgba(255, 255, 255, 0.904)}
+pre {color:rgba(255, 255, 255, 0.904)}
 pre {font-family: Sans-serif}
 pre {font-size:20px}
 h2{color:rgba(255, 255, 255, 0.904)}
@@ -28,7 +24,15 @@ li {margin: 2cap;}
 li {color:rgba(255, 255, 255, 0.904)}
 li {font-family: Sans-serif}
 li {font-family: Sans-serif}
-    body {
+a {
+    text-decoration: none; /* Removes the underline */
+  }
+.What 
+{
+    text-align: left;
+    backdrop-filter: blur(50000px);
+}
+body {
     
     background-size: cover;
         width: 80%;
@@ -43,24 +47,31 @@ li {font-family: Sans-serif}
         padding: auto;
         
     }
-    p {color:rgba(255, 255, 255, 0.904)}
-pre {font-family: Sans-serif}
-pre {font-size:35px}
-pre {text-align: left}
-pre {margin: 2cap;}
+
+#Header
+ {
+    padding:25px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+.help
+{
+backdrop-filter: blur(10px);
+}
 
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
     backdrop-filter: blur(10px);
-    gap: 25px;
+    gap: 50px;
 }
-.About:hover {
+.History:hover {
     box-shadow: 12px 12px 12px rgba(189, 189, 189, 0.945) inset,
     -10px -10px 10px grey inset;
-    transition: all .4s ease;
- -webkit-transition: all .4s ease;
+    transition: all .4s ease-in-out;
+ -webkit-transition: all .4s ease-in-out;
     font-size: 30px;
     backdrop-filter: blur(10px);
     -ms-transform: scale(1.1); /* IE 9 */
@@ -68,8 +79,9 @@ pre {margin: 2cap;}
   transform: scale(1.1); 
   border-radius: 10px;
   display: block;
+  transition: all 0.5s ease-in-out;
 }
- .About a {
+ .History a {
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -79,7 +91,8 @@ pre {margin: 2cap;}
     padding: 20px;
     text-align: center;
   }
-  .About a {
+  .History a
+  {
     height: 200px;
   }
   .Learn:hover
@@ -95,6 +108,7 @@ pre {margin: 2cap;}
   transform: scale(1.1); 
   border-radius: 10px;
   display: block;
+  transition: all 0.5s ease-in-out;
   
   }
   .Learn a {
@@ -115,8 +129,8 @@ pre {margin: 2cap;}
   {
     box-shadow: 12px 12px 12px rgba(189, 189, 189, 0.945) inset,
     -10px -10px 10px grey inset;
-    transition: all .4s ease;
- -webkit-transition: all .4s ease;
+    transition: all .4s ease-in-out;
+ -webkit-transition: all .4s ease-in-out;
     font-size: 30px;
     backdrop-filter: blur(10px);
     -ms-transform: scale(1.1); /* IE 9 */
@@ -124,10 +138,10 @@ pre {margin: 2cap;}
   transform: scale(1.1); 
   border-radius: 10px;
   display: block;
+  transition: all 0.5s ease-in-out;
   
   }
-  .Members a 
-  {
+  .Members a {
     text-decoration: none;
     color: inherit;
     display: flex;
