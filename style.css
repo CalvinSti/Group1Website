@@ -31,7 +31,6 @@ a {
 .What 
 {
     text-align: left;
-    backdrop-filter: blur(50000px);
 }
 body {
     
@@ -44,7 +43,6 @@ body {
 
         background-repeat: no-repeat;
         background-attachment: fixed;
-        backdrop-filter: blur(15px);
         padding: auto;
         
     }
@@ -54,18 +52,15 @@ body {
     padding:25px;
     width: 100%;
     text-align: center;
-    backdrop-filter: blur(10px);
 }
 .help
 {
-backdrop-filter: blur(10px);
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
-    backdrop-filter: blur(10px);
     gap: 50px;
 }
 .History:hover {
@@ -74,7 +69,6 @@ backdrop-filter: blur(10px);
     transition: all .4s ease-in-out;
  -webkit-transition: all .4s ease-in-out;
     font-size: 30px;
-    backdrop-filter: blur(10px);
     -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1); 
@@ -103,7 +97,6 @@ backdrop-filter: blur(10px);
     transition: all .4s ease-in-out;
  -webkit-transition: all .4s ease-in-out;
     font-size: 30px;
-    backdrop-filter: blur(10px);
     -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1); 
@@ -133,7 +126,6 @@ backdrop-filter: blur(10px);
     transition: all .4s ease-in-out;
  -webkit-transition: all .4s ease-in-out;
     font-size: 30px;
-    backdrop-filter: blur(10px);
     -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1); 
