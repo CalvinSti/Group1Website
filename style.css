@@ -1,86 +1,60 @@
-pre {color:rgba(255, 255, 255, 0.904)}
-pre {font-family: Sans-serif}
-pre {font-size:20px}
-h2{color:rgba(255, 255, 255, 0.904)}
-p {color:rgba(255, 255, 255, 0.904)}
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of Java</title>
+    <style>
+    h1 {color:rgba(255, 255, 255, 0.904)}
+    h1 {font-family: Sans-serif}
+    h1 {font-size:50px}
+    h1 {text-align: center}
+    a {text-decoration: none;}
+    p {color:rgba(255, 255, 255, 0.904)}
 p {font-family: Sans-serif}
 p {font-size:35px}
-p {text-align: center}
-p {margin: 2cap;}
-a {color:rgba(255, 255, 255, 0.904)}
-a {font-family: Sans-serif}
-a {font-size:20px}
-h1 {color:rgba(255, 255, 255, 0.904)}
-h1 {font-family: Sans-serif}
-h1 {font-size:50px}
-a {color:rgba(255, 255, 255, 0.904)}
-a {font-family: Sans-serif}
-a {font-size:35px}
-p {text-align: center}
-a {margin: 2cap;}
-li {font-size:35px}
-li {text-align: left}
-li {margin: 2cap;}
-li {color:rgba(255, 255, 255, 0.904)}
-li {font-family: Sans-serif}
-li {font-family: Sans-serif}
-a {
-    text-decoration: none; /* Removes the underline */
-  }
-.What 
-{
-    text-align: left;
-
-}
-body {
+p {text-align: left}
+p {margin: 2cap}
+    body {
     
     background-size: cover;
-        width: 100%;
-        min-height: 20cm;
+        width: 80%;
+        min-height: 40cm;
         margin: auto;
 
         background-position: center;
 
         background-repeat: no-repeat;
         background-attachment: fixed;
-  
+        backdrop-filter: blur(15px);
         padding: auto;
         
     }
-
-#Header
- {
-    padding:25px;
-    width: 100%;
-    text-align: center;
-  
-}
-.help
-{
-}
+    p {color:rgba(255, 255, 255, 0.904)}
+pre {font-family: Sans-serif}
+pre {font-size:35px}
+pre {text-align: left}
+pre {margin: 2cap;}
 
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: auto;
-    size: auto;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    gap: 25px;
 }
-.History:hover {
+.About:hover {
     box-shadow: 12px 12px 12px rgba(189, 189, 189, 0.945) inset,
     -10px -10px 10px grey inset;
-    transition: all .4s ease-in-out;
- -webkit-transition: all .4s ease-in-out;
-    font-size: auto;
+    transition: all .4s ease;
+ -webkit-transition: all .4s ease;
+    font-size: 30px;
+    backdrop-filter: blur(10px);
     -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1); 
+  border-radius: 10px;
   display: block;
-  transition: all 0.5s ease-in-out;
-  max-width: auto;
-  border-radius: 5px;
 }
- .History a {
-  text-decoration: none;
+ .About a {
+    text-decoration: none;
     color: inherit;
     display: flex;
     justify-content: center;
@@ -88,10 +62,8 @@ body {
     flex-direction: column;
     padding: 20px;
     text-align: center;
-    max-width: auto;
- }
-  .History a
-  {
+  }
+  .About a {
     height: 200px;
   }
   .Learn:hover
@@ -100,13 +72,13 @@ body {
     -10px -10px 10px grey inset;
     transition: all .4s ease-in-out;
  -webkit-transition: all .4s ease-in-out;
+    font-size: 30px;
+    backdrop-filter: blur(10px);
     -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1); 
+  border-radius: 10px;
   display: block;
-  transition: all 0.5s ease-in-out;
-  max-width: auto;
-  border-radius: 5px;
   
   }
   .Learn a {
@@ -118,7 +90,6 @@ body {
     flex-direction: column;
     padding: 20px;
     text-align: center;
-    max-width: auto;
   }
   .Learn a
   {
@@ -128,17 +99,19 @@ body {
   {
     box-shadow: 12px 12px 12px rgba(189, 189, 189, 0.945) inset,
     -10px -10px 10px grey inset;
-    transition: all .4s ease-in-out;
- -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease;
+ -webkit-transition: all .4s ease;
+    font-size: 30px;
+    backdrop-filter: blur(10px);
     -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1); 
+  border-radius: 10px;
   display: block;
-  transition: all 0.5s ease-in-out;
-  max-width: auto;
-  border-radius: 5px;
+  
   }
-  .Members a {
+  .Members a 
+  {
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -147,7 +120,6 @@ body {
     flex-direction: column;
     padding: 20px;
     text-align: center;
-    max-width: auto;
   }
   .Members a
   {
