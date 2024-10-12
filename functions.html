@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 1</title>
+    <script defer src="Transition.js"></script>
+    <script defer src="Trail.js"></script>
+    <script defer src="LearnJava.js"></script>
+    <script defer src="Type.js"></script>
+    <script defer src="Hover.js"></script>
+    <style>
+        p {font-size: 30px}
+        p {text-align: left;}
+        Strong {color: rgb(247, 176, 46)}
+        strong {font-size: 50px}
+        pre {font-size: 25px}
+        pre {padding: 12}
+        b {font-size: 50px}
+        pre {font-size: 30px;}
+
+        a {
+            text-decoration: none;
+        }
+        @media (max-width: 1600px) { /*Why do I have to make mobile compatibility*/
+            .float-right {
+                display: none;
+            }   
+        }
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            background-image: rgb(2, 8, 15);
+        }
+            html {
+    scroll-behavior: smooth;
+}
+        
+
+        body {
+            background: rgb(29, 119, 255); /*this stupid thing caused me problems*/
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+            background: transparent;
+        }
+        .grid-container > div {
+            text-align: center;
+            padding: 10px 100px;
+        }
+        .grid-item {
+            color: black;
+            
+        }
+        .grid-item:hover {
+    box-shadow: 12px 12px 12px rgba(189, 189, 189, 0.945) inset,
+    -10px -10px 10px grey inset;
+    transition: all .4s ease-in-out;
+ -webkit-transition: all .4s ease-in-out;
+    font-size: 30px;
+    backdrop-filter: blur(10px);
+    -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); 
+  border-radius: 10px;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+ .grid-item a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+        .hidden {
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+        .show {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+        
+
+    .LearnJava {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-image: linear-gradient(to left, rgb(243, 104, 104),rgb(78, 164, 245));
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 69;
+            display: none;
+        }
+
+        .Close {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        #typing-text {
+    display: inline;
+}
+.Current-tab p {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    background: transparent;
+    
+}
+.Current-tab{
+    font-size: 30px;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    background-color: rgb(29, 119, 255);
+}
+.Current-tab::after, .Current-tab::before{
+    content: "";
+    position: absolute;
+    --angle: 0deg;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    translate: -50%-50%;
+    z-index: -1;
+    padding: 10px;
+    background-image: conic-gradient(from var(--angle), rgb(203, 30, 219), rgb(0, 140, 255),rgb(49, 187, 21), rgb(173, 44, 44), rgb(203, 30, 219));
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+.Current-tab::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+@property --angle{
+    syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+}
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to  {
+    --angle: 360deg;
+    }
+}
+.Wheel {
+    background-image: url("ad870470-0dc9-42dd-93af-a2103af5b801.jfif");
+  background-size: 10%;  
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  translate: -50% 0%;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  min-width: 1200px;
+  opacity: 0.10;
+  animation: move-background 50s linear infinite;
+}
+@keyframes move-background {
+  0% {
+    background-position: 0% 0%;
+  }
+  
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+</style>
+</head>
+<body>
+    <div class="Wheel">
+    </div>
+    <div class="grid-container">
+        <div class="grid-item"><a href="about-java.html"><p>About Java</p></a></div>
+        <div class="Current-tab" id="curtab"><p>Functions of Java</p></div>
+        <div class="grid-item"><a href="history.html"><p>History of Java</p></a></div>
+        <div class="grid-item"><a href="group1.html"><p>Group 1 Members</p></a></div>
+    </div>
+    <div class="text">
+    <p>
+        Java's design incorporates several key features that contribute to its popularity and effectiveness as a programming language:<br><br></p>
+
+        <p>Object-Oriented: Everything in Java is an object which is very modular and reusable based on other factors like for instance encapsulation, inheritance or polymorphism.<br> <br></p>
+
+        <p>Platform Independence: Java code is compiled into platform independent bytecode, which can be run on any machine with JVM. This characteristic forms the basis of WORA principle.<br> <br></p>
+
+        <p>Simple and Easy to Learn: A syntax similar to C++ for ease of understanding makes Java codes available for learning or using for developers – beginners or advanced developers.<br> <br></p>
+
+        <p>Robustness: Java has a clear focus on the control of memory space – automatic garbage collector as well as exceptions that minimize the possibility of complete system failures.<br> <br></p>
+
+        <p>Security: Java is secure as it has some secured bytecode that Refers, Has, Exhibits & Possesses absence of direct pointers etc.<br> <br></p>
+
+        <p>Multithreading: This feature enabled the running of many threads at the same time in a given program making good use of the available resources.<br> <br></p>
+
+        <p>High Performance: By JIT compilation, the intermediate code – Java bytecode is only converted at runtime to native machine code for enhanced execution speed.<br> <br></p>
+
+        <p>Dynamic and Distributed: There is constant linking and loading of classes in Java during execution of Java applications. It is also designed for use in distributed computing environments.</p>
+</div>
+    <div class="LearnJava" id="Onmykneespraying">
+        <div class="Yes" id="no">
+        <button class="Close" id="Button">&times;</button>
+        <p>Want to learn Java? <a href="https://www.w3schools.com/java/default.asp" target="_blank">Click here! (totally not an ip grabber trust me bro)</a></p>
+        </div>
+    </div>
+
+
+</section>
+</body>
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 1</title>
+    <script defer src="Transition.js"></script>
+    <script defer src="Trail.js"></script>
+    <script defer src="LearnJava.js"></script>
+    <script defer src="Type.js"></script>
+    <script defer src="Hover.js"></script>
+    <script defer src="Scroll.js"></script>
+    <style>
+        p {font-size: 30px}
+        Strong {color: rgb(247, 176, 46)}
+        strong {font-size: 50px}
+        pre {font-size: 25px}
+        pre {padding: 12}
+        b {font-size: 50px}
+        a {padding: 0%;}
+        a {
+            text-decoration: none;
+        }
+        @media (max-width: 1600px) { /*Why do I have to make mobile compatibility*/
+            .float-right {
+                display: none;
+            }   
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            max-height: 100px;
+        }
+            html {
+    scroll-behavior: smooth;
+}
+
+        
+
+        body {
+            background: rgb(26, 26, 26); /*this stupid thing caused me problems*/
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 2000px;
+            background-attachment: fixed;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .grid-container > div {
+            text-align: center;
+            padding: 10px 100px;
+        }
+        .grid-item {
+            color: black;
+            background-image: rgb(26, 26, 26);
+        }
+        .grid-item:hover {
+    box-shadow: 12px 12px 12px rgba(189, 189, 189, 0.945) inset,
+    -10px -10px 10px grey inset;
+    transition: all .4s ease-in-out;
+ -webkit-transition: all .4s ease-in-out;
+    font-size: 30px;
+    backdrop-filter: blur(10px);
+    -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); 
+  border-radius: 10px;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+ .grid-item a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+    .LearnJava {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-image: linear-gradient(to left, rgb(243, 104, 104),rgb(78, 164, 245));
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 69;
+            display: none;
+        }
+     .Current-tab p {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    
+}
+.Current-tab{
+    font-size: 30px;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    background-color: rgb(26, 26, 26);
+}
+.Current-tab::after, .Current-tab::before{
+    content: "";
+    position: absolute;
+    --angle: 0deg;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    translate: -50%-50%;
+    z-index: -1;
+    padding: 10px;
+    background-image: conic-gradient(from var(--angle), rgb(203, 30, 219), rgb(0, 140, 255),rgb(49, 187, 21),rgb(203, 30, 219));
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+.Current-tab::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+@property --angle{
+    syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+}
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to  {
+    --angle: 360deg;
+    }
+}
+
+        .Close {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        #typing-text {
+    display: inline;
+}
+.Current-tab p {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    
+}
+.Current-tab{
+    font-size: 30px;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    background-color: rgb(26, 26, 26);
+}
+.Current-tab::after, .Current-tab::before{
+    content: "";
+    position: absolute;
+    --angle: 0deg;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    translate: -50%-50%;
+    z-index: -1;
+    padding: 10px;
+    background-image: conic-gradient(from var(--angle), rgb(203, 30, 219), rgb(0, 140, 255),rgb(49, 187, 21),rgb(203, 30, 219));
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+.Current-tab::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+@property --angle{
+    syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+}
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to  {
+    --angle: 360deg;
+    }
+}
+.Close {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        #typing-text {
+    display: inline;
+}
+.timeline-container {
+    position: relative; 
+            left: 1500px;
+            top: 250px;
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start; 
+            width: 20%;
+    align-items: center;
+    justify-content: space-between;
+    
+
+        }
+
+     .timeline-container {
+    position: relative; 
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20%;
+}
+
+.year-block {
+    display: flex;
+    align-items: center;
+    margin: 50px;
+}
+
+.year-label {
+    padding: 0;
+    z-index: 1;
+    white-space: nowrap;
+    font-size: 100px;
+    color: #fff;
+}
+.year-label2004 {
+    padding: 0;
+    z-index: 1;
+    white-space: nowrap;
+    font-size: 100px;
+    color: #fff;
+}
+    .year-label2016 {
+    padding: 0;
+    z-index: 1;
+    white-space: nowrap;
+    font-size: 100px;
+    color: #fff;
+}
+
+.line {
+    width: 2px;
+    left: 2000px;
+    height: 1000px;
+    background-color: #fff;
+}
+
+.info {
+    position: absolute;
+    top: 650px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info p {
+    font-size: 50px;
+}
+.info1 {
+    position: absolute;
+    top: 1000px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info1 p {
+    font-size: 50px;
+}
+.info2 {
+    position: absolute;
+    top: 7000px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info2 p {
+    font-size: 50px;
+}
+.info3 {
+    position: absolute;
+    top: 4300px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info3 p {
+    font-size: 50px;
+}
+.info4 {
+    position: absolute;
+    top: 5000px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info4 p {
+    font-size: 50px;
+}
+.info5 {
+    position: absolute;
+    top: 5500px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info5 p {
+    font-size: 50px;
+}
+.info6 {
+    position: absolute;
+    top: 6250px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info6 p {
+    font-size: 50px;
+}
+.info7 {
+    position: absolute;
+    top: 6650px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info7 p {
+    font-size: 50px;
+}
+.info8 {
+    position: absolute;
+    top: 17850px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info8 p {
+    font-size: 50px;
+}
+.info9 {
+    position: absolute;
+    top: 10250px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info9 p {
+    font-size: 50px;
+}
+.info10 {
+    position: absolute;
+    top: 12000px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info10 p {
+    font-size: 50px;
+}
+.info11 {
+    position: absolute;
+    top: 12500px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info11 p {
+    font-size: 50px;
+}  
+.info12 {
+    position: absolute;
+    top: 13200px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info12 p {
+    font-size: 50px;
+}
+.info13 {
+    position: absolute;
+    top: 14800px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info13 p {
+    font-size: 50px;
+}
+.info14 {
+    position: absolute;
+    top: 16800px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info14 p {
+    font-size: 50px;
+}
+.info15 {
+    position: absolute;
+    top: 17400px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info15 p {
+    font-size: 50px;
+}
+.info16 {
+    position: absolute;
+    top: 19000px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info16 p {
+    font-size: 50px;
+}
+.info17 {
+    position: absolute;
+    top: 20500px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info17 p {
+    font-size: 50px;
+}
+.info18 {
+    position: absolute;
+    top: 21100px;
+    left: -1500px;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.info18 p {
+    font-size: 50px;
+}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"><a href="about-java.html"><p>About Java</p></a></div>
+        <div class="grid-item"><a href="functions.html"><p>Functions of Java</p></a></div>
+        <div class="Current-tab" id="curtab"><p>History of Java</p></div>
+        <div class="grid-item"><a href="group1.html"><p>Group 1 Members</p></a></div>
+    </div>
+
+    <div class="LearnJava" id="Onmykneespraying">
+        <div class="Yes" id="no">
+        <button class="Close" id="Button">&times;</button>
+        <p>Want to learn Java? <a href="https://www.w3schools.com/java/default.asp" target="_blank">Click here! (totally not an ip grabber trust me bro)</a></p>
+        </div>
+    </div>
+    <div class="timeline-container">
+        <div class="year-block" >
+            <div class="line"></div>
+            <div class="info" id="div1"><p>The "Green Project" was initiated by James Gosling, Mike Sheridan,<br>and Patrick Naughton at Sun Microsystems.<br>The goal was to create a language for consumer electronics,<br>like televisions and set-top boxes.</p></div>
+            <div class="year-label">1990</div>
+        </div>
+        
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info1" id="div2"><p>The team, later known as the Green Team,<br>developed a language called Oak<br>(named after an oak tree outside Gosling’s office).<br>Oak was initially designed for embedded systems,<br>but the project did not gain traction in the consumer electronics industry.</p></div>
+            <div class="year-label">1991</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label">1992</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label">1993</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label">1994</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info2" id="div3"><p>Oak was renamed to Java, inspired by Java coffee<br>(a reference to coffee consumed during development).<br>This year marks the official launch of Java,<br>with Sun Microsystems releasing Java 1.0.<br>The goal was to create a platform-independent language,<br>meaning Java programs could run on any device<br>that supported a Java Virtual Machine (JVM)<br>They Also Made their Official slogan, "Wora"<br>which stands for "Write Once Run Everywhere</p></div>
+            <div class="year-label">1995</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info3" id="div4"><p>Sun Microsystems released Java Development Kit (JDK) 1.0.<br>This was the first stable version of Java, which included<br>essential libraries and tools for developing Java applications.<br>Java quickly gained popularity for its<br>portability, object-oriented programming model, and versatility.
+            </p></div>
+            <div class="year-label">1996</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info4" id="div5"><p>Java 1.1 was released. This version introduced new features like<br></nr>inner classes, JavaBeans, and JDBC (Java Database Connectivity).<br>The rise of Java applets also began,<br>allowing dynamic content in web browsers.</p></div>
+            <div class="year-label">1997</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info5" id="div6"><p>The release of Java 2 Platform (also known as JDK 1.2)<br>marked a major turning point.<br>Java was split into three editions:<br>
+<br>
+Java Standard Edition (J2SE): For desktop and server applications.<br>
+Java Enterprise Edition (J2EE):<br>For large-scale, distributed enterprise applications.<br>
+Java Micro Edition (J2ME): For mobile devices and embedded systems.
+            </p></div>
+            <div class="year-label">1998</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info6" id="div7"><p>The Java Community Process (JCP) was established,<br>allowing third parties to participate in the development<br>of Java specifications,ensuring its evolution as an open standard.
+            </p></div>
+            <div class="year-label">1999</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info7" id="div8"><p>The Java 2 Enterprise Edition (J2EE) 1.3 was released,<br>becoming a standard for building enterprise-level applications.<br>It introduced Enterprise JavaBeans (EJB) 2.0<br>and enhanced support for web services.
+            </p></div>
+            <div class="year-label">2000</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label">2001</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label">2002</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2004">2003</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info8" id="div9"><p>Java 5.0 (formerly known as Java 1.5) was released.<br>This version introduced major language enhancements such as:<br>
+<br>
+Generics<br>
+Enhanced for loop (foreach loop)<br>
+Enumerated types<br>
+Metadata annotations<br>
+Varargs
+            </p></div>
+            <div class="year-label2004">2004</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2004">2005</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info9" id="div10"><p>Sun Microsystems made Java open source<br>by releasing most of the Java Virtual Machine and other components<br>under the GNU General Public License (GPL).
+            </p></div>
+            <div class="year-label2004">2006</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2004">2007</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2004">2008</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info10" id="div11"><p>Oracle Corporation announced its acquisition of Sun Microsystems,<br>which would be completed in 2010. This marked a significant<br>shift in the stewardship of Java.
+            </p></div>
+            <div class="year-label2004">2009</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info11" id="div12"><p>Oracle officially took over the development of Java after<br>acquiring Sun Microsystems. Oracle's stewardship raised concerns<br>in the developer community about the future direction of the language,<br>but Oracle continued to release regular updates.
+            </p></div>
+            <div class="year-label2004">2010</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info12" id="div13"<p>Java 7 was released by Oracle, marking the first<br>major release under Oracle's management. This version <br>introduced key features such as:<br>
+<br>
+Try-with-resources<br>
+The diamond operator<br>
+NIO.2 (enhanced file I/O)
+            </p></div>
+            <div class="year-label2004">2011</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2004">2012</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2004">2013</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info13" id="div14"><p>Java 8 was released,<br>introducing significant updates to the language, including:<br>
+<br>
+Lambda expressions: Enabling functional-style programming.<br>
+The Stream API: Facilitating bulk operations on collections.<br>
+A new date and time API.<br>
+Default methods in interfaces.
+            </p></div>
+            <div class="year-label2004">2014</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2004">2015</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2016">2016</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info14" id="div15"><p>Java 9 introduced the long-awaited module system (Project Jigsaw),<br>allowing for better modularization of applications.<br>It also featured improvements to the JVM and garbage collection.
+            </p></div>
+            <div class="year-label2016">2017</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info15" id="div16"><p>Oracle announced a new release cadence for Java,<br>aiming for a new release every six months. Java 10 and Java 11<br>were released this year. Java 11 was a Long-Term Support (LTS) release,<br>marking Oracle’ snew support model. This release added enhancements<br>like local-variable syntax for lambda expressions and HTTP Client API.
+            </p></div>
+            <div class="year-label2016">2018</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2016">2019</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2016">2020</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info16" id="div17"><p>Java 17 was released as the next LTS version after Java 11.<br>Key improvements included.<br><br>enhanced pattern matching,<br>sealed classes,<br>and text blocks.
+            </p></div>
+            <div class="year-label2016">2021</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="year-label2016">2022</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info17" id="div18"><p>Java 20 continued to refine language features and performance,<br>particularly around garbage collection, JIT compilation,<br>and native memory management.
+            </p></div>
+            <div class="year-label2016">2023</div>
+        </div>
+        <div class="year-block">
+            <div class="line"></div>
+            <div class="info18" id="div19"><p>The Present year, with many more to come</p></div>
+            <div class="year-label2016">2024</div>
+        </div>
+    </div>
+
+</body>
+</html>
