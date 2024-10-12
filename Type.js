@@ -10,4 +10,10 @@ function type() {
     }
 }
 
-window.onload = type; /*this was very cool*/
+window.onload = function() {
+    const websiteWidth = document.body.clientWidth;
+
+    if (websiteWidth >= 1600) {
+        type();
+    }
+};
