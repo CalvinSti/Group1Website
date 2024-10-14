@@ -29,11 +29,12 @@
         }
         html, body {
             height: 100%;
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
-            background-image: rgb(2, 8, 15);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: rgb(2, 8, 15);
+    box-sizing: border-box;
         }
             html {
     scroll-behavior: smooth;
@@ -54,9 +55,9 @@
             background: transparent;
         }
         .grid-container > div {
-            text-align: center;
-            padding: 10px 100px;
-        }
+    text-align: center;
+    padding: 10px 5%;
+}
         .grid-item {
             color: black;
             
@@ -176,18 +177,19 @@
 }
 .Wheel {
     background-image: url("ad870470-0dc9-42dd-93af-a2103af5b801.jfif");
-  background-size: 10%;  
-  position: absolute;
-  left: 50%;
-  top: 0px;
-  translate: -50% 0%;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  min-width: 1200px;
-  opacity: 0.10;
-  animation: move-background 50s linear infinite;
+    background-size: 10%;  
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    translate: -50% 0%;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.10;
+    animation: move-background 50s linear infinite;
+    min-width: 100%;
 }
+
 @keyframes move-background {
   0% {
     background-position: 0% 0%;
